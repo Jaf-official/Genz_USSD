@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Display the main menu
+  let userInput = prompt(
+    "Welcome to GenZ Mobile Banking USSD\n" +
+    "1. Check Balance\n" +
+    "2. Transfer Money\n" +
+    "3. Recharge Phone\n" +
+    "4. Exit\n" +
+    "Please enter the number of your choice:"
+  );
+  
+  // Process user input
+  if (userInput === "1") {
+    alert("Your balance is ₦1000."); 
+  } else if (userInput === "2") {
+    let bank = prompt(
+    "Please Select Bank\n" +
+    "1. Opay\n" +
+    "2. Palmpay\n" +
+    "3. Moniepoint\n"
+  );
+    let account = prompt("Enter recipient account number:");
+    let amount = prompt("Enter the amount to transfer:");
+    let pin = prompt("Enter pin:");
+    
+    alert("Transferred " + "₦" + amount + " successfully to" + account);
+    alert("Thank you for using our mobile banking USSD service.");
+  
+  } else if (userInput === "3") {
+    let phone = prompt("Enter the phone number:");
+    let amount = prompt("Enter the recharge amount:");
+    alert("Recharged " + amount + " to " + phone + " successfully.");
+    alert("Thank you for using our mobile banking USSD service.");
+    
+  } else if (userInput === "4") {
+    alert("Thank you for using our mobile banking USSD service.");
+  } else {
+    alert("Invalid choice. Please select a valid option.");
+  }
+  
+  </script>
+</body>
+</html>
